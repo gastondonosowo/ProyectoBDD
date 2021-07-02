@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.rtl.min.css" integrity="sha384-LPvXVVAlyPoBSGkX8UddpctDks+1P4HG8MhT7/YwqHtJ40bstjzCqjj+VVVDhsCo" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body background="">
+  	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  	<div class="container-fluid">
+      <form action="{{url_for('iniciado')}}" method="POST">
+        <input id="prodId" name="name" type="hidden" value="{{user.0}}">
+        <input id="prodId" name="rut" type="hidden" value="{{user.1}}">
+        <button class="btn btn-primary btn-block">
+          Inicio
+        </button>
+      </form>
+    <form action="{{url_for('logout')}}" method="">
+        <button class="btn btn-primary btn-block">
+          Cerrar sesión
+        </button>
+      </form>
+    </nav>
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="{{url_for('update_user')}}" method="POST">
+          <input id="prodId" name="rut" type="hidden" value="{{user.1}}">
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Nuevo nombre</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="nombres" value="{{developer.1}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Nuevo apellido</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="apellidos" value="{{developer.2}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Nuevo teléfono</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="telefono" value="{{developer.3}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Nuevo mail</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" value="{{developer.4}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Nueva contraseña</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="password" value="{{developer.5}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Actualizar usuario
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+

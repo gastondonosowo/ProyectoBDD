@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="container">
+      <div class="card card-body" style="text-align: center;">
+        <h2>Ingrese sus datos</h2>
+        <form action="{{url_for('add_user')}}" method="POST">
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Ingrese su nombre</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="nombre" placeholder="Nombres">
+          </div>
+          <div class="form-group">
+          <label for="inputEmail" class="col-form-label">Ingrese sus apellidos</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="apellido" placeholder="Apellidos">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Ingrese su RUT</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="rut" placeholder="RUT sin guión">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Ingrese su numero de teléfono</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="telefono" placeholder="Telefono">
+          </div>
+          <div class="form-group">
+          <label for="inputEmail" class="col-form-label">Ingrese su correo electrónico</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="email" placeholder="E-mail">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Ingrese su contraseña</label>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="contraseña" placeholder="Contraseña">
+          </div>
+          <div class="form-group">
+          <label for="inputEmail" class="col-form-label">Seleccione el tipo de usuario que desea registrar</label>
+          </div>
+          <div class="form-group">
+            <select class="form-select" name="tipo_user" id="tipo_user">
+              <option selected>Selecciona una opción</option>
+              <option value="user">Usuario</option>
+              <option value="repartidor">Repartidor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-form-label">Ingrese su dirección</label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="calle" placeholder="Calle">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="numero" placeholder="Número" style="margin-top:10px;margin-bottom: 10px;">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="comuna" placeholder="Comuna">
+            </div>
+          <button class="btn btn-primary btn-block">
+            Registrar
+          </button>
+        </form>
+      </div>
+    </div>
+{% endblock %}
